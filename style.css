@@ -1,0 +1,132 @@
+:root {
+
+    --Primary-Dark-cyan: hsl(158, 36%, 37%);
+    --Primary-Cream: hsl(30, 38%, 92%);
+
+    --Neutral-Very-darkblue: hsl(212, 21%, 14%);
+    --Neutral-Dark-grayish-blue: hsl(228, 12%, 48%);
+    --Neutral-White: hsl(0, 0%, 100%);
+
+    --mobile-picture-width: 285px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--Primary-Cream);
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+p {
+    font-size: 14px;
+    color: var(--Neutral-Dark-grayish-blue);
+}
+
+.card {
+    margin: auto;
+    border-radius: 10px;
+    background-color: var(--Neutral-White);
+    max-width: 375px;
+}
+
+.card-description {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.type {
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+}
+
+.title {
+    font-family: 'Fraunces', serif;
+    font-size: 3.2rem;
+    line-height: 90%;
+    color: var(--Neutral-Very-darkblue);
+}
+
+.description {
+    letter-spacing: 0px;
+    line-height: 160%;
+}
+
+picture, img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.price {
+    display: flex;
+}
+
+.new-price {
+    color: var(--Primary-Dark-cyan);
+    font-size: 3rem;
+    font-family: 'Fraunces', serif;
+}
+
+.old-price {
+    text-decoration: line-through;
+    margin: auto 1em;
+}
+
+.btn {
+    background-color: var(--Primary-Dark-cyan);
+    padding: 1em;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color:hsl(158, 53%, 20%);
+}
+
+.btn p {
+    color: var(--Neutral-White);
+    font-weight: bold;
+}
+
+.btn img {
+    height: 20px;
+    width: 20px;
+}
+
+.attribution {
+    margin-bottom: 1em;
+}
+
+@media screen and (min-width: 376px) {
+    .card {
+        display: flex;
+        max-width: calc(var(--mobile-picture-width)*2);
+    }
+
+    picture, img {
+        height: 100%;
+        width: var(--mobile-picture-width);
+        border-radius: 10px 0 0 10px;
+    }
+
+    .card-description {
+        width: var(--mobile-picture-width);
+    }
+    
+}
